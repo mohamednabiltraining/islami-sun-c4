@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:islami_sun/HomeScreen.dart';
+import 'package:islami_sun/home/HomeScreen.dart';
+import 'package:islami_sun/home/quran/SuraDetailsScreen.dart';
 
 void main() {
   runApp(const MyApp());
+}
+
+class MyThemeData {
+  static const Color primaryColor = Color.fromARGB(255, 183, 147, 95);
 }
 
 class MyApp extends StatelessWidget {
@@ -14,9 +19,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.transparent,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            selectedLabelStyle: TextStyle(color: Colors.black),
+            selectedItemColor: Colors.black,
+            selectedIconTheme: IconThemeData(color: Colors.black),
+            unselectedIconTheme: IconThemeData(color: Colors.white)),
+        progressIndicatorTheme:
+            ProgressIndicatorThemeData(color: MyThemeData.primaryColor),
+        appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.black),
+            titleTextStyle: TextStyle(
+              color: Colors.black,
+              fontSize: 30,
+            ),
+            color: Colors.transparent,
+            elevation: 0),
+        primaryColor: MyThemeData.primaryColor,
       ),
-      routes: {HomeScreen.routeName: (buildContext) => HomeScreen()},
+      routes: {
+        HomeScreen.routeName: (buildContext) => HomeScreen(),
+        SuraDetailsScreen.routeName: (buildContext) => SuraDetailsScreen(),
+      },
       initialRoute: HomeScreen.routeName,
     );
   }

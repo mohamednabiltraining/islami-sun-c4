@@ -30,11 +30,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
             iconTheme: IconThemeData(color: Colors.black),
             titleTextStyle: TextStyle(
-              color: Colors.black,
-              fontSize: 30,
+              color: Colors.blue,
+              fontSize: 28,
             ),
             color: Colors.transparent,
-            elevation: 0),
+            elevation: 5),
         primaryColor: MyThemeData.primaryColor,
       ),
       routes: {

@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text('Islami'),
+            title: Text('اسلامي'),
           ),
           bottomNavigationBar: Theme(
             data: Theme.of(context)
@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
               items: [
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_quran.png')),
-                    label: 'Quran'),
+                    label: 'قران'),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_hadeth.png')),
                     label: 'hadeth'),
@@ -62,6 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
+
+  void testFunction() {}
 
   List<Widget> views = [QuranTab(), HadethTab(), TasbehTab(), RadioTab()];
 }

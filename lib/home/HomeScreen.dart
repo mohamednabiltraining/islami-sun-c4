@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_sun/home/hadeth/HadtehTab.dart';
 import 'package:islami_sun/home/quran/QuranTab.dart';
 import 'package:islami_sun/home/radio/RadioTab.dart';
@@ -27,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text('اسلامي'),
+            title: Text(AppLocalizations.of(context)!.app_title),
           ),
           bottomNavigationBar: Theme(
             data: Theme.of(context)
@@ -42,16 +43,16 @@ class _HomeScreenState extends State<HomeScreen> {
               items: [
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_quran.png')),
-                    label: 'قران'),
+                    label: AppLocalizations.of(context)!.quran),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_hadeth.png')),
-                    label: 'hadeth'),
+                    label: AppLocalizations.of(context)!.hadeth),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_sebha.png')),
-                    label: 'Tasbeh'),
+                    label: AppLocalizations.of(context)!.sebha),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/ic_radio.png')),
-                    label: 'Radio'),
+                    label: AppLocalizations.of(context)!.radio),
               ],
             ),
           ),
@@ -62,8 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   }
-
-  void testFunction() {}
 
   List<Widget> views = [QuranTab(), HadethTab(), TasbehTab(), RadioTab()];
 }

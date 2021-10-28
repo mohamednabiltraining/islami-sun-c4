@@ -16,7 +16,9 @@ class HadethDetailsScreen extends StatelessWidget {
       Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(args.title),
+          title: Text(args.title,
+              style:TextStyle( color: Colors.black,
+                fontSize: 30,)),
         ),
         body: Container(
             padding: EdgeInsets.all(12),

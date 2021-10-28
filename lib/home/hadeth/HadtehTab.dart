@@ -57,8 +57,6 @@ class _HadethTabState extends State<HadethTab> {
       for (int j = 1; j < hadethLines.length; j++) {
         content += hadethLines[j] + ' ';
       }
-      print('title $title');
-      print('content $content');
       HadethItem item = HadethItem(title, content);
       ahadtheData.add(item);
     }

@@ -28,7 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text(AppLocalizations.of(context)!.app_title),
+            title: Text(AppLocalizations.of(context)!.app_title,
+            style:TextStyle( color: Colors.black,
+                fontSize: 30,))
           ),
           bottomNavigationBar: Theme(
             data: Theme.of(context)

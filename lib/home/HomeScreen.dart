@@ -4,6 +4,7 @@ import 'package:islami_sun/home/hadeth/HadtehTab.dart';
 import 'package:islami_sun/home/quran/QuranTab.dart';
 import 'package:islami_sun/home/radio/RadioTab.dart';
 import 'package:islami_sun/home/tasbeh/TasbehTab.dart';
+
 import 'package:islami_sun/main.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text(AppLocalizations.of(context)!.app_title),
+            title: Text(AppLocalizations.of(context)!.app_title,
+            style:TextStyle( color: Colors.black,
+                fontSize: 30,))
           ),
           bottomNavigationBar: Theme(
             data: Theme.of(context)
@@ -64,5 +67,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  List<Widget> views = [QuranTab(), HadethTab(), TasbehTab(), RadioTab()];
+  List<Widget> views = [QuranTab(), HadethTab(), Seb7a(), RadioTab()];
 }

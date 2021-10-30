@@ -24,7 +24,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
       Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text(args.name),
+          title: Text(args.name,
+    style:TextStyle( color: Colors.black,
+    fontSize: 30,)),
         ),
         body: Container(
             margin: EdgeInsets.symmetric(vertical: 96, horizontal: 24),

@@ -18,8 +18,6 @@ class MyThemeData {
         selectedItemColor: Colors.black,
         selectedIconTheme: IconThemeData(color: Colors.black),
         unselectedIconTheme: IconThemeData(color: Colors.white)),
-    progressIndicatorTheme:
-        ProgressIndicatorThemeData(color: MyThemeData.primaryColor),
     appBarTheme: AppBarTheme(
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black),
@@ -38,15 +36,10 @@ class MyThemeData {
         selectedItemColor: Colors.black,
         selectedIconTheme: IconThemeData(color: Colors.black),
         unselectedIconTheme: IconThemeData(color: Colors.white)),
-    progressIndicatorTheme:
-        ProgressIndicatorThemeData(color: MyThemeData.primaryColor),
+
     appBarTheme: AppBarTheme(
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.black),
-        titleTextStyle: TextStyle(
-          color: Colors.black,
-          fontSize: 30,
-        ),
         color: Colors.transparent,
         elevation: 0),
     primaryColor: MyThemeData.primaryColor,
@@ -60,6 +53,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'islami',
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,

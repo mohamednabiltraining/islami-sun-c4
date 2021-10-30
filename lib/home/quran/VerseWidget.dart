@@ -13,7 +13,7 @@ class AyaWidget extends StatelessWidget {
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 18),
+        style: TextStyle(fontSize: 26),
       ),
     );
   }

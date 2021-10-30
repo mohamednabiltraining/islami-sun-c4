@@ -69,6 +69,5 @@ class _HadethTabState extends State<HadethTab> {
 class HadethItem {
   String title;
   String content;
-
   HadethItem(this.title, this.content);
 }

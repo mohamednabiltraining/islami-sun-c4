@@ -53,6 +53,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'islami',
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,

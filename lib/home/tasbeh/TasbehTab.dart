@@ -38,7 +38,7 @@ class _Seb7aState extends State<Seb7a> {
             child:  Column(
               children: [
                 Image.asset('assets/images/head_sebha_logo.png'),
-                Transform.rotate(
+                 Transform.rotate(
                   angle: rotateValue*((22/7)/180),
                   child: Image.asset('assets/images/body_of_seb7a.png'),
                 ),

@@ -11,6 +11,7 @@ class _Seb7aState extends State<Seb7a> {
   int text_count=0;
   int rotateValue=0;
   void _incrementCounter() {
+    TextState();
     setState(() {
       _counter++;
       rotateValue+=6;
@@ -18,7 +19,7 @@ class _Seb7aState extends State<Seb7a> {
   }
   void TextState(){
       setState(() {
-        if(_counter==5) {
+        if(_counter==33) {
           _counter = 0;
           if (text_count < text.length-1)
           text_count ++;
@@ -29,7 +30,7 @@ class _Seb7aState extends State<Seb7a> {
   }
   @override
   Widget build(BuildContext context) {
-    TextState();
+    //TextState();
     return Column(
       children: [
         Expanded(

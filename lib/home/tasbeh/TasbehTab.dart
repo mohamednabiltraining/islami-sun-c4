@@ -9,9 +9,11 @@ class _Seb7aState extends State<Seb7a> {
   int _counter = 0;
   List<String> text=['سبحان الله','الحمد الله','الله اكبر'];
   int text_count=0;
+  int rotateValue=0;
   void _incrementCounter() {
     setState(() {
       _counter++;
+      rotateValue+=6;
     });
   }
   void TextState(){
@@ -32,8 +34,11 @@ class _Seb7aState extends State<Seb7a> {
       child: Column(
         children: [
           Image.asset('assets/images/head_sebha_logo.png'),
-          MaterialButton(onPressed: _incrementCounter,
-          child: Image.asset('assets/images/body_of_seb7a.png'),
+          Transform.rotate(
+            angle: rotateValue*((22/7)/180),
+            child: MaterialButton(onPressed: _incrementCounter,
+            child: Image.asset('assets/images/body_of_seb7a.png'),
+            ),
           ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,

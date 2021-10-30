@@ -3,7 +3,7 @@ import 'package:islami_sun/home/quran/sura_name_widget.dart';
 import 'package:islami_sun/main.dart';
 
 class QuranTab extends StatelessWidget {
-  List<String> names = [
+ final List<String> names = [
     "الفاتحه",
     "البقرة",
     "آل عمران",

@@ -46,9 +46,9 @@ class _HadethTabState extends State<HadethTab> {
     List<HadethItem> ahadtheData = [];
     String fileContent =
         await rootBundle.loadString('assets/files/ahadeth.txt');
-    List<String> ahadeth = fileContent.split('\r\n#');
+    List<String> ahadeth = fileContent.trim().split('\n#');
     for (int i = 0; i < ahadeth.length; i++) {
-      List<String> hadethLines = ahadeth[i].split('\r\n');
+      List<String> hadethLines = ahadeth[i].trim().split('\n');
       if (hadethLines[0].isEmpty) {
         hadethLines.removeAt(0);
       }
